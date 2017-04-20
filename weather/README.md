@@ -12,6 +12,7 @@
 
 # 实施
 1. 搭建 react 工作平台。
+- 安装 nvm （会自动安装 nodejs 和 npm）
 - hello react
   1. 配置 ndoejs 并显示 『hello react』
 - 拿到城市列表并展示

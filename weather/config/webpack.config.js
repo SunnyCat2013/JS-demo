@@ -23,5 +23,12 @@ module.exports = {
         loader: 'babel-loader'
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    modules: [
+      SRC,
+      'node_modules'
+    ]
   }
 }

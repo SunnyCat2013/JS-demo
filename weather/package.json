@@ -1,0 +1,24 @@
+{
+  "name": "weather",
+  "version": "0.0.0",
+  "description": "Show the weather of cities in China",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard --verbose | snazzy"
+  },
+  "author": "lizhenyang_2008@163.com",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^7.2.2",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 class MainPage extends React.Component {
   render () {
-    return <div> hello react haha </div>
+    return <div> hello react ashdf</div>
   }
 
 }

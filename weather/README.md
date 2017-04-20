@@ -63,3 +63,4 @@
 # 参考
 - [《根据中国气象局提供的API接口实现天气查询》](http://blog.csdn.net/gebitan505/article/details/14166763)
 从该博客中学习如何获取中国气象局中城市 ID 的方法。
+- [hot reload](https://www.npmjs.com/package/webpack-hot-middleware)

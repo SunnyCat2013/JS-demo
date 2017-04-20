@@ -6,7 +6,10 @@ const SRC = path.join(__dirname, '../src')
 const TARGET = process.env.npm_lifecycle_event
 
 module.exports = {
-  entry: path.join(SRC, 'app'),
+  entry: [
+    'webpack-hot-middleware/client',
+    path.join(SRC, 'app')
+  ],
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'main.js',
@@ -30,5 +33,8 @@ module.exports = {
       SRC,
       'node_modules'
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 }

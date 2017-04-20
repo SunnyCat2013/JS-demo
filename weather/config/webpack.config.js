@@ -18,9 +18,9 @@ module.exports = {
         include: [
           SRC,
           'node_modules'
-        ]
-      },
-      loader: 'babel-loader'
+        ],
+        loader: 'babel-loader'
+      }
     ]
   }
 }

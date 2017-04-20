@@ -8,7 +8,7 @@ const TARGET = process.env.npm_lifecycle_event
 module.exports = {
   entry: path.join(SRC, 'app'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'main.js'
   },
   module: {

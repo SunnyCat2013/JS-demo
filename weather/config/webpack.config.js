@@ -7,13 +7,13 @@ const TARGET = process.env.npm_lifecycle_event
 
 module.exports = {
   entry: [
-    'webpack-hot-middleware/client',
-    path.join(SRC, 'app')
+    path.join(SRC, 'app'),
+    'webpack-hot-middleware/client?reload=true'
   ],
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'main.js',
-    publicPath: '../dist'
+    publicPath: '/static'
   },
   module: {
     rules: [

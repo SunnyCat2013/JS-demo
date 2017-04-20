@@ -14,7 +14,9 @@
 1. 搭建 react 工作平台。
 - 安装 nvm （会自动安装 nodejs 和 npm）
 - hello react
-  1. 配置 ndoejs 并显示 『hello react』
+  - [ ] 配置 ndoejs 并显示 『hello react』
+  - [ ] 添加 node server
+  - [ ] hot reload
 - 拿到城市列表并展示
 通过 [cities list api](http://www.weather.com.cn/data/city3jdata/china.html) 可以拿到 [中国天气网](http://www.weather.com.cn/) 的一份包含省份代码和省份名称的 json 数据。
 

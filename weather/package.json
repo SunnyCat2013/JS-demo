@@ -4,6 +4,7 @@
   "description": "Show the weather of cities in China",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node server/index",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard --verbose | snazzy",
     "build": "webpack --config config/webpack.config.js"
@@ -11,6 +12,7 @@
   "author": "lizhenyang_2008@163.com",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.2",
     "babel-loader": "^6.4.1",
@@ -23,6 +25,7 @@
     "parser": "babel-eslint"
   },
   "dependencies": {
+    "express": "^4.15.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   }

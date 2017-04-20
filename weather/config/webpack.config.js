@@ -1,6 +1,8 @@
 const path = require('path')
 
 const webpack = require('webpack')
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+
 
 const SRC = path.join(__dirname, '../src')
 const TARGET = process.env.npm_lifecycle_event
@@ -27,7 +29,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['css-loader']
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
       }
     ]
   },
@@ -39,6 +44,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin("[name].css")
   ]
 }

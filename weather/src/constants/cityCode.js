@@ -1,4 +1,4 @@
-export const cityCode = {
+export default {
   10101: "北京",
   10102: "上海",
   10103: "天津",

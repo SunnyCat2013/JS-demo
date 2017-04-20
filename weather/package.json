@@ -28,7 +28,9 @@
     "parser": "babel-eslint"
   },
   "dependencies": {
+    "antd": "^2.9.1",
     "express": "^4.15.2",
+    "lodash": "^4.17.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   }

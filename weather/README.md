@@ -18,6 +18,7 @@
   - [ ] 添加 node server
   - [ ] hot reload
 2. 拿到城市列表并展示
+<!-- 读取 react class properties -->
 通过 [cities list api](http://www.weather.com.cn/data/city3jdata/china.html) 可以拿到 [中国天气网](http://www.weather.com.cn/) 的一份包含省份代码和省份名称的 json 数据。
 
 ``` javascript

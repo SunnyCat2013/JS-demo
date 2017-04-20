@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "standard --verbose | snazzy"
+    "lint": "standard --verbose | snazzy",
+    "build": "webpack --config config/webpack.config.js"
   },
   "author": "lizhenyang_2008@163.com",
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^7.2.2",
+    "babel-loader": "^6.4.1",
     "snazzy": "^7.0.0",
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "webpack": "^2.4.1"
   },
   "standard": {
     "parser": "babel-eslint"

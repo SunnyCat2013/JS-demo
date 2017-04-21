@@ -1,8 +1,13 @@
 import {
   FETCH_CITY_WEATHER,
   FETCH_CITY_WEATHER_SUCCESS,
-  FETCH_CITY_WEATHER_FAIL
+  FETCH_CITY_WEATHER_FAIL,
+  REMOVE_CITY
 } from './action'
+
+import {
+  removeCityInfoById
+} from './utils/modifyCityInfos'
 
 const cityList = (state = {
   cityInfos: {},
@@ -35,6 +40,12 @@ const cityList = (state = {
       return {
         ...state,
         loading: true
+      }
+    }
+    case REMOVE_CITY: {
+      const { payload } = action
+      return {
+        ...removeCityInfoById(state, payload)
       }
     }
     default:

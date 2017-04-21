@@ -18,12 +18,6 @@ function getCityNames () {
 }
 
 class CityList extends React.Component {
-  // componentDidMount () {
-  //   const {
-  //     fetchCityWeather
-  //   } = this.props
-  //   fetchCityWeather()
-  // }
   state = {
     selectedCity: ''
   }
@@ -39,9 +33,13 @@ class CityList extends React.Component {
       fetchCityWeather
     } = this.props
     fetchCityWeather(selectedCity)
+    this.setState({
+      selectedCity: ''
+    })
   }
   render () {
     const cityNames = getCityNames()
+    const { selectedCity } = this.state
     return (
       <div>
         <div>
@@ -49,6 +47,7 @@ class CityList extends React.Component {
             style={{ width: 300 }}
             dataSource={cityNames}
             placeholder='由于使用的国外 API，所以请输入城市拼音'
+            value={selectedCity}
             filterOption={(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}
             onSelect={this.onSelect}
           />
@@ -58,6 +57,9 @@ class CityList extends React.Component {
             loading={false}>
           添加城市
         </Button>
+        </div>
+        <div>
+          已添加的城市信息：
         </div>
       </div>
     )

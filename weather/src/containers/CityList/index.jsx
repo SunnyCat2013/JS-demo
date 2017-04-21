@@ -1,45 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import _ from 'lodash'
-import { Input, Select } from 'antd'
 
-// import cityiesList from '../../constants/cityCode'
+import { AutoComplete } from 'antd';
+
+import cityiesInfo from '../../constants/ChinaCity.json'
 
 import {
   updateNewCityInfo,
   fetchCityList
 } from '../../modules/CityList/action'
 
-const InputGroup = Input.Group
-const Option = Select.Option
-
-
-import { Cascader } from 'antd';
-
-const options = [{
-  value: 'zhejiang',
-  label: '浙江',
-  // children: [{
-  //   value: 'hangzhou',
-  //   label: 'Hangzhou',
-  //   children: [{
-  //     value: 'xihu',
-  //     label: 'West Lake',
-  //   }],
-  // }],
-}, {
-  value: 'jiangsu',
-  label: 'Jiangsu',
-  disabled: true,
-  children: [{
-    value: 'nanjing',
-    label: 'Nanjing',
-    children: [{
-      value: 'zhonghuamen',
-      label: 'Zhong Hua Men',
-    }],
-  }],
-}]
+function getCityNames () {
+  return _.map(cityiesInfo, 'name')
+}
 
 // const CityList = () => {
 class CityList extends React.Component {
@@ -56,9 +30,15 @@ class CityList extends React.Component {
     fetchCityList()
   }
   render () {
+    const cityNames = getCityNames()
     return (
       <div>
-        <Cascader options={options} onChange={this.onChange} />
+        <AutoComplete
+          style={{ width: 200 }}
+          dataSource={cityNames}
+          placeholder="Try input Chinese Pinyin"
+          filterOption={(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}
+        />
       </div>
     )
   }

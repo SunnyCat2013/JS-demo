@@ -31,7 +31,10 @@
     "webpack-hot-middleware": "^2.18.0"
   },
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/*.json"
+    ]
   },
   "dependencies": {
     "antd": "^2.9.1",

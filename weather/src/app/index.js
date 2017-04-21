@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
+import logger from 'redux-logger'
 
 import MainPage from '../containers/MainPage'
-
 import rootReducer from '../modules/rootReducer'
 
-let store = createStore(rootReducer)
+let store = createStore(rootReducer, applyMiddleware(logger))
 
 ReactDOM.render(
   <Provider store={store}>

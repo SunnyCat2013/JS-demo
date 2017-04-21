@@ -13,16 +13,23 @@ const cityList = (state = {
     case FETCH_CITY_WEATHER_SUCCESS: {
       return {
         ...state,
-        cityTree: action.payload
+        cityTree: action.payload,
+        loading: false
       }
     }
     case FETCH_CITY_WEATHER_FAIL: {
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
+        loading: false
       }
     }
-    case UPDATE_NEW_CITY_INFO:
+    case UPDATE_NEW_CITY_INFO: {
+      return {
+        ...state,
+        loading: true
+      }
+    }
     case FETCH_CITY_WEATHER:
     default:
       return state

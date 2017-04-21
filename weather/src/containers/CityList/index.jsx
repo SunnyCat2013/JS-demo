@@ -7,7 +7,6 @@ import { AutoComplete, Button } from 'antd'
 import cityiesInfo from '../../constants/ChinaCity.json'
 
 import {
-  updateNewCityInfo,
   fetchCityWeather
 } from '../../modules/CityList/action'
 
@@ -19,24 +18,26 @@ function getCityNames () {
 }
 
 class CityList extends React.Component {
-  onChange = (value) => {
-    const { updateNewCityInfo } = this.props
-    updateNewCityInfo(value)
-  }
-  componentDidMount () {
-    const {
-      updateNewCityInfo,
-      fetchCityWeather
-    } = this.props
-    updateNewCityInfo('hha')
-    fetchCityWeather()
-  }
+  // componentDidMount () {
+  //   const {
+  //     fetchCityWeather
+  //   } = this.props
+  //   fetchCityWeather()
+  // }
 
   onSelect = (value) => {
-    console.log('selected value:', value);
+    console.log('selected value:', value)
+    const {
+      fetchCityWeather
+    } = this.props
+    fetchCityWeather(value)
   }
   onClick = (value) => {
-    console.log('on click', value);
+    console.log('on click', value)
+    const {
+      fetchCityWeather
+    } = this.props
+    fetchCityWeather(value)
   }
   render () {
     const cityNames = getCityNames()
@@ -50,10 +51,10 @@ class CityList extends React.Component {
             filterOption={(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}
             onSelect={this.onSelect}
           />
-        <Button
-          type="primary"
-          onClick={this.onClick}
-          loading={false}>
+          <Button
+            type='primary'
+            onClick={this.onClick}
+            loading={false}>
           添加城市
         </Button>
         </div>
@@ -63,7 +64,6 @@ class CityList extends React.Component {
 }
 
 const mapDispatchToProps = ({
-  updateNewCityInfo,
   fetchCityWeather
 })
 

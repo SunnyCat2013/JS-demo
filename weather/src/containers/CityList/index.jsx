@@ -17,7 +17,7 @@ import { Cascader } from 'antd';
 
 const options = [{
   value: 'zhejiang',
-  label: 'Zhejiang',
+  label: '浙江',
   // children: [{
   //   value: 'hangzhou',
   //   label: 'Hangzhou',

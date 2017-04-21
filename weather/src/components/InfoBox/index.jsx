@@ -9,7 +9,8 @@ import * as styles from './InfoBox.css'
 
 class InfoBox extends React.Component {
   onClick = (cityId) => {
-    console.log('hah', cityId);
+    const { cityInfo: { id, name, weather, wind } } = this.props
+    console.log('this id', id, name);
   }
   render () {
     const { cityInfo: { id, name, weather, wind } } = this.props

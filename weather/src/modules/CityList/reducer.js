@@ -16,12 +16,12 @@ const cityList = (state = {
   switch (action.type) {
     case FETCH_CITY_WEATHER_SUCCESS: {
       const { payload: { city, list } } = action
-      const { id } = city
+      const { id, name } = city
       return {
         ...state,
         cityInfos: {
           ...state.cityInfos,
-          [id]: {
+          [`${name}-${id}`]: {
             city,
             list
           }

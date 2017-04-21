@@ -11,7 +11,6 @@ import {
 import InfoBox from '../../components/InfoBox'
 
 class CurrentCity extends React.Component {
-
   render () {
     const { cityInfos } = this.props
     return (

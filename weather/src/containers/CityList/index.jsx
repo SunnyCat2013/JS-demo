@@ -64,10 +64,10 @@ class CityList extends React.Component {
             filterOption={(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}
             onSelect={this.onSelect}
           />
-        <Button
-          type='primary'
-          onClick={this.onClick}
-          loading={loading}
+          <Button
+            type='primary'
+            onClick={this.onClick}
+            loading={loading}
         >
           添加城市
         </Button>

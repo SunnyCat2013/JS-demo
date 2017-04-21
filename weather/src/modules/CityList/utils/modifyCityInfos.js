@@ -1,4 +1,5 @@
+import _ from 'lodash'
+
 export function removeCityInfoById (state, id) {
-  console.log('prepare to remove city');
-  return state
+  return _.omit(state, `cityInfos.${id}`)
 }

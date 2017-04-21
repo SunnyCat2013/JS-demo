@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 
-import { AutoComplete } from 'antd';
+import { AutoComplete } from 'antd'
 
 import cityiesInfo from '../../constants/ChinaCity.json'
 
@@ -36,7 +36,7 @@ class CityList extends React.Component {
         <AutoComplete
           style={{ width: 200 }}
           dataSource={cityNames}
-          placeholder="Try input Chinese Pinyin"
+          placeholder='Try input Chinese Pinyin'
           filterOption={(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}
         />
       </div>

@@ -11,13 +11,11 @@ export function updateNewCityInfo (cityInfo) {
   }
 }
 
-
 export function fetchCityList () {
   return {
     type: FETCH_CITY_LIST
   }
 }
-
 
 export function fetchCityListSuccess (cityList) {
   return {

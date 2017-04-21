@@ -1,15 +1,13 @@
 const path = require('path')
 
 const webpack = require('webpack')
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
-
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const SRC = path.join(__dirname, '../src')
-const TARGET = process.env.npm_lifecycle_event
 
 module.exports = {
   entry: [
-    "babel-polyfill",
+    'babel-polyfill',
     path.join(SRC, 'app'),
     'webpack-hot-middleware/client?reload=true'
   ],
@@ -31,8 +29,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
+          fallback: 'style-loader',
+          use: 'css-loader'
         })
       }
     ]
@@ -46,6 +44,6 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin("[name].css")
+    new ExtractTextPlugin('[name].css')
   ]
 }

@@ -9,7 +9,6 @@ class MainPage extends React.Component {
         <CityList />
       </div>)
   }
-
 }
 
 export default MainPage

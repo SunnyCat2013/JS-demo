@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import _ from 'lodash'
 import { Input, Select } from 'antd'
 
-import cityiesList from '../../constants/cityCode'
+// import cityiesList from '../../constants/cityCode'
 
 import {
   updateNewCityInfo,

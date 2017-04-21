@@ -11,14 +11,16 @@ const cityList = (state = {
 }, action) => {
   switch (action.type) {
     case FETCH_CITY_WEATHER_SUCCESS: {
-      const { payload: { city } } = action
+      const { payload: { city, list } } = action
       const { id } = city
-
       return {
         ...state,
         cityInfos: {
           ...state.cityInfos,
-          [id]: city
+          [id]: {
+            city,
+            list
+          }
         },
         loading: false
       }

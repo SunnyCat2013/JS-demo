@@ -7,6 +7,7 @@
     "start": "babel-node server/index",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard --verbose | snazzy",
+    "fix" : "standard --fix  | snazzy",
     "build": "webpack --config config/webpack.config.js"
   },
   "author": "lizhenyang_2008@163.com",
@@ -31,7 +32,14 @@
     "webpack-hot-middleware": "^2.18.0"
   },
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/*.json",
+      "dist/"
+    ],
+    "globals": [
+      "fetch"
+    ]
   },
   "dependencies": {
     "antd": "^2.9.1",

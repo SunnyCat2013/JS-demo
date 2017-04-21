@@ -20,6 +20,12 @@ const cityList = (state = {
         cityTree: action.payload
       }
     }
+    case FETCH_CITY_LIST_FAIL: {
+      return {
+        ...state,
+        error: action.payload
+      }
+    }
     case UPDATE_NEW_CITY_INFO:
     case FETCH_CITY_LIST:
     default:

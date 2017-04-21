@@ -5,7 +5,6 @@ import webpackConfig from '../config/webpack.config.js'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 
-
 const compiler = webpack(webpackConfig)
 const ROOT = path.join(__dirname, '..')
 

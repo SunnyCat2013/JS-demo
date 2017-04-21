@@ -1,5 +1,5 @@
 # 查询中国主要城市天气状况的应用
-
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 # 预想功能
 1. version 0.1.0
 - [ ] 增加城市

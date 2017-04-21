@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 
-import { AutoComplete } from 'antd'
+import { AutoComplete, Button } from 'antd'
 
 import cityiesInfo from '../../constants/ChinaCity.json'
 
@@ -18,7 +18,6 @@ function getCityNames () {
           .value()
 }
 
-// const CityList = () => {
 class CityList extends React.Component {
   onChange = (value) => {
     const { updateNewCityInfo } = this.props
@@ -32,16 +31,32 @@ class CityList extends React.Component {
     updateNewCityInfo('hha')
     fetchCityList()
   }
+
+  onSelect = (value) => {
+    console.log('selected value:', value);
+  }
+  onClick = (value) => {
+    console.log('on click', value);
+  }
   render () {
     const cityNames = getCityNames()
     return (
       <div>
-        <AutoComplete
-          style={{ width: 200 }}
-          dataSource={cityNames}
-          placeholder='Try input Chinese Pinyin'
-          filterOption={(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}
-        />
+        <div>
+          <AutoComplete
+            style={{ width: 300 }}
+            dataSource={cityNames}
+            placeholder='由于使用的国外 API，所以请输入城市拼音'
+            filterOption={(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}
+            onSelect={this.onSelect}
+          />
+        <Button
+          type="primary"
+          onClick={this.onClick}
+          loading={false}>
+          添加城市
+        </Button>
+        </div>
       </div>
     )
   }

@@ -11,7 +11,8 @@ const cityList = (state = {
     secondLevel: '',
     thirdLevel: ''
   },
-  cityTree: {}
+  cityTree: {},
+  loading: false
 }, action) => {
   switch (action.type) {
     case FETCH_CITY_LIST_SUCCESS: {

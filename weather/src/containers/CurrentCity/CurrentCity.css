@@ -1,3 +1,4 @@
 :local .infoBox {
   width: 300;
+  border: 2px solid red;
 }

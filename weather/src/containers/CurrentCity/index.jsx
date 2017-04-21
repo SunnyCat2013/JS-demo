@@ -8,17 +8,22 @@ import {
   cityInfosSelector
 } from '../../modules/CityList/selector'
 
+import * as styles from './CurrentCity.css'
+
 class CurrentCity extends React.Component {
   render () {
     const { cityInfos } = this.props
-    console.log('this.props in current city', this.props);
+    console.log({cityInfors})
     return (
       <div>
         已添加的城市信息：
         {
           _.map(cityInfos, ({ id, name }) => {
             return (
-              <div key={id}>
+              <div
+                key={id}
+                className={styles.infoBox}
+              >
                 <span>
                   名称：{name}
                 </span>

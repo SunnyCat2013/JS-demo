@@ -1,7 +1,6 @@
 import _ from 'lodash'
 
 export function formatCityInfos (cityInfos) {
-  console.log('cityInfos', {cityInfos});
   return _.map(cityInfos, ({ city, list }) => {
     const { id, name } = city
     const currentInfo = list[0]

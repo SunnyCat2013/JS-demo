@@ -9,6 +9,7 @@ const TARGET = process.env.npm_lifecycle_event
 
 module.exports = {
   entry: [
+    "babel-polyfill",
     path.join(SRC, 'app'),
     'webpack-hot-middleware/client?reload=true'
   ],

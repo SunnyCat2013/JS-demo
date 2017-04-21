@@ -6,7 +6,8 @@ import { Input, Select } from 'antd'
 import cityiesList from '../../constants/cityCode'
 
 import {
-  updateNewCityInfo
+  updateNewCityInfo,
+  fetchCityList
 } from '../../modules/CityList/action'
 
 const InputGroup = Input.Group
@@ -47,8 +48,12 @@ class CityList extends React.Component {
     updateNewCityInfo(value)
   }
   componentDidMount () {
-    const { updateNewCityInfo } = this.props
+    const {
+      updateNewCityInfo,
+      fetchCityList
+    } = this.props
     updateNewCityInfo('hha')
+    fetchCityList()
   }
   render () {
     return (
@@ -60,7 +65,8 @@ class CityList extends React.Component {
 }
 
 const mapDispatchToProps = ({
-  updateNewCityInfo
+  updateNewCityInfo,
+  fetchCityList
 })
 
 export default connect(null, mapDispatchToProps)(CityList)

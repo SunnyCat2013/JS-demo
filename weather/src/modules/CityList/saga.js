@@ -6,7 +6,7 @@ function fetchCityListApi (action) {
   const { cityInfo } = action
   console.log('action in saga', {action})
   // return fetch()
-  return fetch('http://www.weather.com.cn/data/city3jdata/china.html')
+  return fetch('http://www.weather.com.cn/data/city3jdata/china.html', {mode: 'cors'})
           .then(res => res.json())
 }
 

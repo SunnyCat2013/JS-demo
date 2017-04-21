@@ -66,9 +66,7 @@ class CityList extends React.Component {
           添加城市
         </Button>
         </div>
-        <div>
-          已添加的城市信息：
-        </div>
+
       </div>
     )
   }

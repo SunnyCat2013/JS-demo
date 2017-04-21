@@ -12,3 +12,5 @@ const cityList = (state = {
       return state
   }
 }
+
+export default cityList

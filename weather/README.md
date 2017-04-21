@@ -17,7 +17,9 @@
   - [ ] 配置 ndoejs 并显示 『hello react』
   - [ ] 添加 node server
   - [ ] hot reload
-2. 拿到城市列表并展示
+2. 使用 api 拿到省、市、区名称列表并展示
+- [ ] 添加 redux 
+- [ ] 拿到主城市列表
 <!-- 读取 react class properties -->
 通过 [cities list api](http://www.weather.com.cn/data/city3jdata/china.html) 可以拿到 [中国天气网](http://www.weather.com.cn/) 的一份包含省份代码和省份名称的 json 数据。
 
@@ -60,6 +62,7 @@
 }
 
 ```
+- [ ] 拿到地级城市列表
 
 # 参考
 - [《根据中国气象局提供的API接口实现天气查询》](http://blog.csdn.net/gebitan505/article/details/14166763)

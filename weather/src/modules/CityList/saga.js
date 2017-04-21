@@ -12,7 +12,6 @@ function fetchCityWeatherApi (action) {
 function * fetchCityWeather (action) {
   try {
     const cityList = yield call(fetchCityWeatherApi, action)
-    console.log('cityList json', {cityList})
     yield put(actions.fetchCityWeatherSuccess(cityList))
   } catch (e) {
     yield put(actions.fetchCityWeatherFail(e))

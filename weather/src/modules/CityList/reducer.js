@@ -1,5 +1,4 @@
 import {
-  UPDATE_NEW_CITY_INFO,
   FETCH_CITY_WEATHER,
   FETCH_CITY_WEATHER_SUCCESS,
   FETCH_CITY_WEATHER_FAIL
@@ -32,13 +31,12 @@ const cityList = (state = {
         loading: false
       }
     }
-    case UPDATE_NEW_CITY_INFO: {
+    case FETCH_CITY_WEATHER: {
       return {
         ...state,
         loading: true
       }
     }
-    case FETCH_CITY_WEATHER:
     default:
       return state
   }

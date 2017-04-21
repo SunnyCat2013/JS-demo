@@ -1,8 +1,13 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import _ from 'lodash'
 import { Input, Select } from 'antd'
 
 import cityiesList from '../../constants/cityCode'
+
+import {
+  getChildCityList
+} from '../../modules/CityList/action'
 
 const InputGroup = Input.Group
 const Option = Select.Option
@@ -40,6 +45,10 @@ class CityList extends React.Component {
   onChange = (value) => {
     console.log(value)
   }
+  componentDidMount () {
+    const { getChildCityList } = this.props
+    getChildCityList('hha')
+  }
   render () {
     return (
       <div>
@@ -49,4 +58,8 @@ class CityList extends React.Component {
   }
 }
 
-export default CityList
+const mapDispatchToProps = ({
+  getChildCityList
+})
+
+export default connect(null, mapDispatchToProps)(CityList)

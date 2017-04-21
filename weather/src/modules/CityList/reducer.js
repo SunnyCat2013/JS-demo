@@ -6,14 +6,20 @@ import {
 } from './action'
 
 const cityList = (state = {
-  cityTree: {},
+  cityInfos: {},
   loading: false
 }, action) => {
   switch (action.type) {
     case FETCH_CITY_WEATHER_SUCCESS: {
+      const { payload: { city } } = action
+      const { id } = city
+
       return {
         ...state,
-        cityTree: action.payload,
+        cityInfos: {
+          ...state.cityInfos,
+          [id]: city
+        },
         loading: false
       }
     }

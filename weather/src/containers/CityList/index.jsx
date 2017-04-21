@@ -24,20 +24,21 @@ class CityList extends React.Component {
   //   } = this.props
   //   fetchCityWeather()
   // }
+  state = {
+    selectedCity: ''
+  }
 
   onSelect = (value) => {
-    console.log('selected value:', value)
-    const {
-      fetchCityWeather
-    } = this.props
-    fetchCityWeather(value)
+    this.setState({
+      selectedCity: value
+    })
   }
-  onClick = (value) => {
-    console.log('on click', value)
+  onClick = () => {
+    const { selectedCity } = this.state
     const {
       fetchCityWeather
     } = this.props
-    fetchCityWeather(value)
+    fetchCityWeather(selectedCity)
   }
   render () {
     const cityNames = getCityNames()

@@ -3,11 +3,10 @@ import { connect } from 'react-redux'
 import _ from 'lodash'
 import { Input, Select } from 'antd'
 
-import cityiesList from '../../constants/cityCode'
+// import cityiesList from '../../constants/cityCode'
 
 import {
-  updateNewCityInfo,
-  fetchCityList
+  updateNewCityInfo
 } from '../../modules/CityList/action'
 
 const InputGroup = Input.Group
@@ -49,11 +48,9 @@ class CityList extends React.Component {
   }
   componentDidMount () {
     const {
-      updateNewCityInfo,
-      fetchCityList
+      updateNewCityInfo
     } = this.props
     updateNewCityInfo('hha')
-    fetchCityList()
   }
   render () {
     return (
@@ -65,8 +62,7 @@ class CityList extends React.Component {
 }
 
 const mapDispatchToProps = ({
-  updateNewCityInfo,
-  fetchCityList
+  updateNewCityInfo
 })
 
 export default connect(null, mapDispatchToProps)(CityList)

@@ -12,7 +12,10 @@ import {
 } from '../../modules/CityList/action'
 
 function getCityNames () {
-  return _.map(cityiesInfo, 'name')
+  return _(cityiesInfo)
+          .map('name')
+          .uniq()
+          .value()
 }
 
 // const CityList = () => {

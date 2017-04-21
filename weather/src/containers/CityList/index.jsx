@@ -43,11 +43,9 @@ const options = [{
 // const CityList = () => {
 class CityList extends React.Component {
   onChange = (value) => {
-    console.log(value)
   }
   componentDidMount () {
     const { getChildCityList } = this.props
-    console.log('aha')
     getChildCityList('hha')
   }
   render () {

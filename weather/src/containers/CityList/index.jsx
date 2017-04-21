@@ -33,6 +33,12 @@ class CityList extends React.Component {
       selectedCity: value
     })
   }
+  componentDidMount () {
+    const {
+      fetchCityWeather
+    } = this.props
+    fetchCityWeather('Beijing')
+  }
   onClick = () => {
     const { selectedCity } = this.state
     const {

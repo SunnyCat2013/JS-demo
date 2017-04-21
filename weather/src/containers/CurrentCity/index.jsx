@@ -13,20 +13,31 @@ import * as styles from './CurrentCity.css'
 class CurrentCity extends React.Component {
   render () {
     const { cityInfos } = this.props
-    console.log({cityInfors})
+    console.log({cityInfos})
     return (
       <div>
         已添加的城市信息：
         {
-          _.map(cityInfos, ({ id, name }) => {
+          _.map(cityInfos, ({ id, name, weather, wind }) => {
             return (
               <div
                 key={id}
                 className={styles.infoBox}
               >
-                <span>
-                  名称：{name}
-                </span>
+                <div className={styles.info}>
+                  <div>
+                    城市名：{name}
+                  </div>
+                  <div>
+                    天气： {weather}
+                  </div>
+                  <div>
+                    风速： {wind}
+                  </div>
+                </div>
+                <div className={styles.remove}>
+                  删除
+                </div>
               </div>
             )
           })

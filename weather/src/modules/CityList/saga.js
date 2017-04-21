@@ -19,7 +19,7 @@ function * fetchCityList (action) {
 }
 
 function * watchFetchCityListSaga () {
-  yield takeEvery(actions.FETCH_CITY_LIST, fetchCityList)
+  yield takeEvery(actions.FETCH_CITY_WEATHER, fetchCityList)
 }
 
 export default watchFetchCityListSaga

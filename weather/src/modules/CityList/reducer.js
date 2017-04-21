@@ -1,34 +1,29 @@
 import {
   UPDATE_NEW_CITY_INFO,
-  FETCH_CITY_LIST,
-  FETCH_CITY_LIST_SUCCESS,
-  FETCH_CITY_LIST_FAIL
+  FETCH_CITY_WEATHER,
+  FETCH_CITY_WEATHER_SUCCESS,
+  FETCH_CITY_WEATHER_FAIL
 } from './action'
 
 const cityList = (state = {
-  cityInfo: {
-    firstLevel: 'china',
-    secondLevel: '',
-    thirdLevel: ''
-  },
   cityTree: {},
   loading: false
 }, action) => {
   switch (action.type) {
-    case FETCH_CITY_LIST_SUCCESS: {
+    case FETCH_CITY_WEATHER_SUCCESS: {
       return {
         ...state,
         cityTree: action.payload
       }
     }
-    case FETCH_CITY_LIST_FAIL: {
+    case FETCH_CITY_WEATHER_FAIL: {
       return {
         ...state,
         error: action.payload
       }
     }
     case UPDATE_NEW_CITY_INFO:
-    case FETCH_CITY_LIST:
+    case FETCH_CITY_WEATHER:
     default:
       return state
   }

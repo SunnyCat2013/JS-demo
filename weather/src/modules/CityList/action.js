@@ -11,20 +11,20 @@ export function updateNewCityInfo (cityInfo) {
   }
 }
 
-export function fetchCityList () {
+export function fetchCityWeather () {
   return {
     type: FETCH_CITY_WEATHER
   }
 }
 
-export function fetchCityListSuccess (cityList) {
+export function fetchCityWeatherSuccess (cityList) {
   return {
     type: FETCH_CITY_WEATHER_SUCCESS,
     payload: cityList
   }
 }
 
-export function fetchCityListFail (e) {
+export function fetchCityWeatherFail (e) {
   return {
     type: FETCH_CITY_WEATHER_FAIL,
     payload: e

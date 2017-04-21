@@ -8,7 +8,7 @@ import cityiesInfo from '../../constants/ChinaCity.json'
 
 import {
   updateNewCityInfo,
-  fetchCityList
+  fetchCityWeather
 } from '../../modules/CityList/action'
 
 function getCityNames () {
@@ -26,10 +26,10 @@ class CityList extends React.Component {
   componentDidMount () {
     const {
       updateNewCityInfo,
-      fetchCityList
+      fetchCityWeather
     } = this.props
     updateNewCityInfo('hha')
-    fetchCityList()
+    fetchCityWeather()
   }
 
   onSelect = (value) => {
@@ -64,7 +64,7 @@ class CityList extends React.Component {
 
 const mapDispatchToProps = ({
   updateNewCityInfo,
-  fetchCityList
+  fetchCityWeather
 })
 
 export default connect(null, mapDispatchToProps)(CityList)

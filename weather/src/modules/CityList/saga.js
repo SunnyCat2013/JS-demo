@@ -6,7 +6,7 @@ function fetchCityListApi (action) {
   const { cityInfo } = action
   console.log('action in saga', {action})
   // return fetch()
-  const url = 'http://api.openweathermap.org/data/2.5/forecast?q=M%C3%BCnchen,DE&appid=cef4d411da7f41e4a7055a64851c4212'
+  const url = 'http://api.openweathermap.org/data/2.5/forecast?q=Beijing,cn&appid=cef4d411da7f41e4a7055a64851c4212'
   return fetch(url)
           .then(res => res.json())
 }

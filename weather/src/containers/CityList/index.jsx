@@ -6,7 +6,7 @@ import { Input, Select } from 'antd'
 import cityiesList from '../../constants/cityCode'
 
 import {
-  getChildCityList
+  updateNewCityInfo
 } from '../../modules/CityList/action'
 
 const InputGroup = Input.Group
@@ -18,14 +18,14 @@ import { Cascader } from 'antd';
 const options = [{
   value: 'zhejiang',
   label: 'Zhejiang',
-  children: [{
-    value: 'hangzhou',
-    label: 'Hangzhou',
-    children: [{
-      value: 'xihu',
-      label: 'West Lake',
-    }],
-  }],
+  // children: [{
+  //   value: 'hangzhou',
+  //   label: 'Hangzhou',
+  //   children: [{
+  //     value: 'xihu',
+  //     label: 'West Lake',
+  //   }],
+  // }],
 }, {
   value: 'jiangsu',
   label: 'Jiangsu',
@@ -43,10 +43,12 @@ const options = [{
 // const CityList = () => {
 class CityList extends React.Component {
   onChange = (value) => {
+    const { updateNewCityInfo } = this.props
+    updateNewCityInfo(value)
   }
   componentDidMount () {
-    const { getChildCityList } = this.props
-    getChildCityList('hha')
+    const { updateNewCityInfo } = this.props
+    updateNewCityInfo('hha')
   }
   render () {
     return (
@@ -58,7 +60,7 @@ class CityList extends React.Component {
 }
 
 const mapDispatchToProps = ({
-  getChildCityList
+  updateNewCityInfo
 })
 
 export default connect(null, mapDispatchToProps)(CityList)

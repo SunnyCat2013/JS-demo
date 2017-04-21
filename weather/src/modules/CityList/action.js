@@ -1,8 +1,8 @@
-export const GET_CHILD_CITY_LIST = 'GET_CHILD_CITY_LIST'
+export const UPDATE_NEW_CITY_INFO = 'UPDATE_NEW_CITY_INFO'
 
-export function getChildCityList (cityCode) {
+export function updateNewCityInfo (cityInfo) {
   return {
-    type: GET_CHILD_CITY_LIST,
-    text: cityCode
+    type: UPDATE_NEW_CITY_INFO,
+    text:cityInfo 
   }
 }

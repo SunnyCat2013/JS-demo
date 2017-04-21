@@ -1,13 +1,17 @@
 import {
-  GET_CHILD_CITY_LIST
+  UPDATE_NEW_CITY_INFO
 } from './action'
 
 const cityList = (state = {
-  cityCode: 'china',
+  cityInfo: {
+    firstLevel: 'china',
+    secondLevel: '',
+    thirdLevel: ''
+  },
   cityTree: {}
 }, action) => {
   switch (action.type) {
-    case GET_CHILD_CITY_LIST:
+    case UPDATE_NEW_CITY_INFO:
     default:
       return state
   }

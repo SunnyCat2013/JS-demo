@@ -7,7 +7,7 @@ export const FETCH_CITY_LIST_FAIL = 'FETCH_CITY_LIST_FAIL'
 export function updateNewCityInfo (cityInfo) {
   return {
     type: UPDATE_NEW_CITY_INFO,
-    text:cityInfo
+    text: cityInfo
   }
 }
 

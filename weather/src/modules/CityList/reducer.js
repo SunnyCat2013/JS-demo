@@ -1,5 +1,8 @@
 import {
-  UPDATE_NEW_CITY_INFO
+  UPDATE_NEW_CITY_INFO,
+  FETCH_CITY_LIST,
+  FETCH_CITY_LIST_SUCCESS,
+  FETCH_CITY_LIST_FAIL
 } from './action'
 
 const cityList = (state = {
@@ -11,7 +14,14 @@ const cityList = (state = {
   cityTree: {}
 }, action) => {
   switch (action.type) {
+    case FETCH_CITY_LIST_SUCCESS: {
+      return {
+        ...state,
+        cityTree: action.payload
+      }
+    }
     case UPDATE_NEW_CITY_INFO:
+    case FETCH_CITY_LIST:
     default:
       return state
   }

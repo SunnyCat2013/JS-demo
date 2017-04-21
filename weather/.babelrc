@@ -3,6 +3,7 @@
   "plugins": [
     "transform-react-jsx",
     ["import", {"libraryName": "antd","style": "css"}],
-    "transform-class-properties"
+    "transform-class-properties",
+    "transform-object-rest-spread"
   ]
 }

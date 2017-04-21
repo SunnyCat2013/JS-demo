@@ -2,9 +2,15 @@ import React from 'react'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 
+import { createStructuredSelector } from 'reselect'
+
 import { AutoComplete, Button } from 'antd'
 
 import cityiesInfo from '../../constants/ChinaCity.json'
+
+import {
+  loadingSelector
+} from '../../modules/CityList/selector'
 
 import {
   fetchCityWeather
@@ -40,6 +46,7 @@ class CityList extends React.Component {
   render () {
     const cityNames = getCityNames()
     const { selectedCity } = this.state
+    const { loading } = this.props
     return (
       <div>
         <div>
@@ -54,7 +61,8 @@ class CityList extends React.Component {
           <Button
             type='primary'
             onClick={this.onClick}
-            loading={false}>
+            loading={loading}
+          >
           添加城市
         </Button>
         </div>
@@ -66,8 +74,12 @@ class CityList extends React.Component {
   }
 }
 
+const mapStateToProps = createStructuredSelector({
+  loading: loadingSelector
+})
+
 const mapDispatchToProps = ({
   fetchCityWeather
 })
 
-export default connect(null, mapDispatchToProps)(CityList)
+export default connect(mapStateToProps, mapDispatchToProps)(CityList)

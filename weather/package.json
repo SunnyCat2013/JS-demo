@@ -7,7 +7,7 @@
     "start": "babel-node server/index",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard --verbose | snazzy",
-    "fix" : "standard --fix  | snazzy",
+    "fix": "standard --fix  | snazzy",
     "build": "webpack --config config/webpack.config.js"
   },
   "author": "lizhenyang_2008@163.com",
@@ -51,6 +51,7 @@
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
     "redux-logger": "^3.0.1",
-    "redux-saga": "^0.14.7"
+    "redux-saga": "^0.14.7",
+    "reselect": "^3.0.0"
   }
 }

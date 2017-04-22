@@ -18,7 +18,9 @@ class CurrentCity extends React.Component {
         已添加的城市信息：
         {
           _.map(cityInfos, cityInfo => {
-            return <InfoBox cityInfo={cityInfo} />
+            return <div key={cityInfo.id}>
+              <InfoBox cityInfo={cityInfo} />
+            </div>
           })
         }
       </div>

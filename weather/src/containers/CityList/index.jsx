@@ -16,6 +16,8 @@ import {
   fetchCityWeather
 } from '../../modules/CityList/action'
 
+import * as styles from './CityList.css'
+
 function getCityNames () {
   return _(cityiesInfo)
           .map('name')
@@ -54,7 +56,7 @@ class CityList extends React.Component {
     const { selectedCity } = this.state
     const { loading } = this.props
     return (
-      <div>
+      <div className={styles.main}>
         <div>
           <AutoComplete
             style={{ width: 200 }}
@@ -68,9 +70,9 @@ class CityList extends React.Component {
             type='primary'
             onClick={this.onClick}
             loading={loading}
-        >
-          添加城市
-        </Button>
+          >
+            添加城市
+          </Button>
         </div>
 
       </div>

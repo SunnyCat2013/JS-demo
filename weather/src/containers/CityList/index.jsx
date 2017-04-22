@@ -57,7 +57,7 @@ class CityList extends React.Component {
       <div>
         <div>
           <AutoComplete
-            style={{ width: 300 }}
+            style={{ width: 200 }}
             dataSource={cityNames}
             placeholder='由于使用的国外 API，所以请输入城市拼音'
             value={selectedCity}

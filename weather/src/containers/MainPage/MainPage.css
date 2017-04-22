@@ -1,0 +1,16 @@
+:local .main {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px auto;
+}
+:local .left {
+  height: 100vh;
+  width: 300px;
+  border: 1px dashed #499;
+  background-color: #ddd;
+}
+:local .right {
+  height: 100vh;
+  width: calc(100vw - 300px - 20px);
+  border: 1px dashed blue;
+}

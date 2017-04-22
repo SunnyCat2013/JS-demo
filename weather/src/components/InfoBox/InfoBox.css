@@ -5,15 +5,16 @@
   justify-content: space-between;
   align-items: center;
   margin: 2px 0 auto;
+  background: #eee;
 }
 
 :local .info {
   with: 200;
   margin-left: 5px;
-  border: 2px solid green;
+  /*border: 2px solid green;*/
 }
 
 :local .remove {
-  with: 100;
-  border: 2px solid blue;
+  /*with: 100;*/
+  /*border: 2px solid blue;*/
 }

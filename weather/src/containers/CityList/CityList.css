@@ -1,5 +1,8 @@
 :local .main {
   display: flex;
   margin: 5px 5px 20px auto;
-  background: #ededed;
+  justify-content: space-between;
+}
+:local .input {
+  margin-left: 5px;
 }

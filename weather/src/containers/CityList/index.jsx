@@ -57,7 +57,7 @@ class CityList extends React.Component {
     const { loading } = this.props
     return (
       <div className={styles.main}>
-        <div>
+        <div className={styles.input}>
           <AutoComplete
             style={{ width: 200 }}
             dataSource={cityNames}
@@ -66,6 +66,8 @@ class CityList extends React.Component {
             filterOption={(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}
             onSelect={this.onSelect}
           />
+        </div>
+        <div>
           <Button
             type='primary'
             onClick={this.onClick}

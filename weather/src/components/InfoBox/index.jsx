@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import { Button } from 'antd'
 
+
 import {
   removeCity
 } from '../../modules/CityList/action'

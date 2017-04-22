@@ -1,5 +1,4 @@
 :local .map {
   border: 2px dashed #222;
-  /*height: 600px;*/
   height: inherit;
 }

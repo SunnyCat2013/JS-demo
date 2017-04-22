@@ -21,6 +21,9 @@
 <!-- 读取 react class properties -->
 通过 [cities list api](http://www.weather.com.cn/data/city3jdata/china.html) 可以拿到 [中国天气网](http://www.weather.com.cn/) 的一份包含省份代码和省份名称的 json 数据。但是，它并不支持跨域访问（不支持 CORS，cross-origin resource sharing）。不得已，我使用了 OpenWeatherMap 的免费账户。但是，它并没有汉字的城市名称。
 
+# 实现效果
+![2017-04-22 12 24 34 pm](https://cloud.githubusercontent.com/assets/4412909/25301373/1f5b3d26-2758-11e7-8000-69d9f7b1c43b.png)
+
 # 参考
 - [OpenWeatherMap](https://openweathermap.org/api) 通过 OpenWeatherMap 的免费 api 获得天气数据。
 - [《根据中国气象局提供的API接口实现天气查询》](http://blog.csdn.net/gebitan505/article/details/14166763)

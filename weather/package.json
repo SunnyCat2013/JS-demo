@@ -7,7 +7,7 @@
     "start": "babel-node server/index",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard --verbose | snazzy",
-    "fix" : "standard --fix  | snazzy",
+    "fix": "standard --fix  | snazzy",
     "build": "webpack --config config/webpack.config.js"
   },
   "author": "lizhenyang_2008@163.com",
@@ -27,6 +27,7 @@
     "snazzy": "^7.0.0",
     "standard": "^10.0.2",
     "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
     "webpack": "^2.4.1",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.18.0"
@@ -45,12 +46,14 @@
     "antd": "^2.9.1",
     "babel-polyfill": "^6.23.0",
     "express": "^4.15.2",
+    "leaflet": "^1.0.3",
     "lodash": "^4.17.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
     "redux-logger": "^3.0.1",
-    "redux-saga": "^0.14.7"
+    "redux-saga": "^0.14.7",
+    "reselect": "^3.0.0"
   }
 }

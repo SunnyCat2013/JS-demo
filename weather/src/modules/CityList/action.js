@@ -1,32 +1,33 @@
-export const UPDATE_NEW_CITY_INFO = 'UPDATE_NEW_CITY_INFO'
+export const FETCH_CITY_WEATHER = 'FETCH_CITY_WEATHER'
+export const FETCH_CITY_WEATHER_SUCCESS = 'FETCH_CITY_WEATHER_SUCCESS'
+export const FETCH_CITY_WEATHER_FAIL = 'FETCH_CITY_WEATHER_FAIL'
 
-export const FETCH_CITY_LIST = 'FETCH_CITY_LIST'
-export const FETCH_CITY_LIST_SUCCESS = 'FETCH_CITY_LIST_SUCCESS'
-export const FETCH_CITY_LIST_FAIL = 'FETCH_CITY_LIST_FAIL'
+export const REMOVE_CITY = 'REMOVE_CITY'
 
-export function updateNewCityInfo (cityInfo) {
+export function fetchCityWeather (cityName) {
   return {
-    type: UPDATE_NEW_CITY_INFO,
-    text: cityInfo
+    type: FETCH_CITY_WEATHER,
+    payload: cityName
   }
 }
 
-export function fetchCityList () {
+export function fetchCityWeatherSuccess (cityList) {
   return {
-    type: FETCH_CITY_LIST
-  }
-}
-
-export function fetchCityListSuccess (cityList) {
-  return {
-    type: FETCH_CITY_LIST_SUCCESS,
+    type: FETCH_CITY_WEATHER_SUCCESS,
     payload: cityList
   }
 }
 
-export function fetchCityListFail (e) {
+export function fetchCityWeatherFail (e) {
   return {
-    type: FETCH_CITY_LIST_FAIL,
+    type: FETCH_CITY_WEATHER_FAIL,
     payload: e
+  }
+}
+
+export function removeCity (cityId) {
+  return {
+    type: REMOVE_CITY,
+    payload: cityId
   }
 }

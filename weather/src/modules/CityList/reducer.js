@@ -1,33 +1,53 @@
 import {
-  UPDATE_NEW_CITY_INFO,
-  FETCH_CITY_LIST,
-  FETCH_CITY_LIST_SUCCESS,
-  FETCH_CITY_LIST_FAIL
+  FETCH_CITY_WEATHER,
+  FETCH_CITY_WEATHER_SUCCESS,
+  FETCH_CITY_WEATHER_FAIL,
+  REMOVE_CITY
 } from './action'
 
+import {
+  removeCityInfoById
+} from './utils/modifyCityInfos'
+
 const cityList = (state = {
-  cityInfo: {
-    firstLevel: 'china',
-    secondLevel: '',
-    thirdLevel: ''
-  },
-  cityTree: {}
+  cityInfos: {},
+  loading: false
 }, action) => {
   switch (action.type) {
-    case FETCH_CITY_LIST_SUCCESS: {
+    case FETCH_CITY_WEATHER_SUCCESS: {
+      const { payload: { city, list } } = action
+      const { id, name } = city
       return {
         ...state,
-        cityTree: action.payload
+        cityInfos: {
+          ...state.cityInfos,
+          [`${name}-${id}`]: {
+            city,
+            list
+          }
+        },
+        loading: false
       }
     }
-    case FETCH_CITY_LIST_FAIL: {
+    case FETCH_CITY_WEATHER_FAIL: {
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
+        loading: false
       }
     }
-    case UPDATE_NEW_CITY_INFO:
-    case FETCH_CITY_LIST:
+    case FETCH_CITY_WEATHER: {
+      return {
+        ...state,
+        loading: true
+      }
+    }
+    case REMOVE_CITY: {
+      const { payload } = action
+      return {
+        ...removeCityInfoById(state, payload)
+      }
+    }
     default:
       return state
   }

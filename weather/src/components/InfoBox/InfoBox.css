@@ -1,0 +1,15 @@
+:local .infoBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 5px auto;
+  background: #eee;
+}
+
+:local .info {
+  margin-left: 5px;
+}
+
+:local .remove {
+  margin-right: 5px;
+}

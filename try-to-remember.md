@@ -5,3 +5,14 @@
 webpack? npm? babel?
 2. 写一些有趣的例子怎么样？
 去哪里吃？
+
+# 
+1. 发现已经安装了 npm，升级一下。
+```
+sudo npm i -g npm
+```
+
+2. npm start 发现不行。先把各种工具和库安装一下。
+```
+npm install
+```

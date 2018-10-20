@@ -4,7 +4,8 @@
 需要安装什么？
 webpack? npm? babel?
 2. 写一些有趣的例子怎么样？
-去哪里吃？
+- 去哪里吃？
+- tensorflowjs games
 
 # 
 1. 发现已经安装了 npm，升级一下。
@@ -16,3 +17,5 @@ sudo npm i -g npm
 ```
 npm install
 ```
+
+3. 如果没有使用 hot reload 则需要使用 webpack build 一下。否则，在浏览器中就找不到资源。
